@@ -1,25 +1,30 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission06_Gordon.Models
 {
-    public class Form
+    public class Movies
     {
         // set the id to MovieID; generate for each row
         [Key]
         [Required]
         public int MovieID { get; set; }
-        [Required(ErrorMessage = "Category is required.")]
-        public string Category { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public int? CategoryId { get; set; }
+        public Categories? Category { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Year is required.")]
+        [Range(1888, int.MaxValue)]
         public string Year { get; set; }
-        [Required(ErrorMessage = "Direcctor is required.")]
-        public string Director { get; set; }
-        [Required(ErrorMessage = "Rating is required.")]
-        public string Rating { get; set; }
-        public bool ? Edited { get; set; }
+        public string ? Director { get; set; }
+        public string ? Rating { get; set; }
+        [Required(ErrorMessage = "Edited is required.")]
+        public bool Edited { get; set; }
         public string ? LentTo { get; set; }
+        [Required(ErrorMessage = "Copied to Plex is required.")]
+        public bool CopiedToPlex { get; set; }
         
         [StringLength(25, ErrorMessage = "Notes must be at most 25 characters long.")]
         public string ? Notes { get; set; }
