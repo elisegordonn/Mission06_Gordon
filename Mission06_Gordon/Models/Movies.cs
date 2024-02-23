@@ -16,7 +16,7 @@ namespace Mission06_Gordon.Models
         [Required(ErrorMessage = "Title is required.")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Year is required.")]
-        [Range(1888, int.MaxValue)]
+        [Range(1888, int.MaxValue, ErrorMessage = "Year must be 1888 or later.")]
         public int Year { get; set; }
         public string ? Director { get; set; }
         public string ? Rating { get; set; }
