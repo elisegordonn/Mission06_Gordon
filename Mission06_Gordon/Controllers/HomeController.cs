@@ -30,7 +30,7 @@ namespace Mission06_Gordon.Controllers
                 .OrderBy(x => x.Category)
                 .ToList();
             
-            return View();   
+            return View("MovieForm", new Movies());   
         }
         
         [HttpPost]
@@ -54,8 +54,8 @@ namespace Mission06_Gordon.Controllers
         {
             //Linq
             var movieSet = _context.Movies.Include(x => x.Category)
-                .OrderBy(x => x.MovieID).ToList();
-            //@x.Category
+                .OrderBy(x => x.MovieId).ToList();
+           
 
             return View(movieSet);
         }
@@ -63,7 +63,7 @@ namespace Mission06_Gordon.Controllers
         public IActionResult Edit(int id)
         {
             var recordToEdit = _context.Movies
-                .Single(x => x.MovieID == id);
+                .Single(x => x.MovieId == id);
             
             ViewBag.Categories = _context.Categories
                 .OrderBy(x => x.Category)
@@ -83,7 +83,7 @@ namespace Mission06_Gordon.Controllers
         public IActionResult Delete(int id)
         {
             var recordToDelete = _context.Movies
-                .Single(x => x.MovieID == id);
+                .Single(x => x.MovieId == id);
 
             return View(recordToDelete);
         }

@@ -8,7 +8,7 @@
 <br />
 
 <form method="post">
-    <input type="hidden" asp-for="MovieID" />
+    <input type="hidden" asp-for="MovieId" />
 
     <select asp-for="CategoryId">
         <option value="">Select a Category:</option>
@@ -17,9 +17,6 @@
             <option value="@c.CategoryId">@c.Category</option>
         }
     </select>
-    @* <label asp-for="Category">Category:</label>
-    <input asp-for="Category" />
-    <span asp-validation-for="Category"></span> *@
     <br />
     <br />
     <label asp-for="Title">Movie Title:</label>
@@ -72,4 +69,5 @@
     <br />
     <br />
     <button type="submit" class="sub-movie">Submit Movie</button>
+
 </form>

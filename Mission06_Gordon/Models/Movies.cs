@@ -5,10 +5,10 @@ namespace Mission06_Gordon.Models
 {
     public class Movies
     {
-        // set the id to MovieID; generate for each row
+        // set the id to MovieId; generate for each row
         [Key]
         [Required]
-        public int MovieID { get; set; }
+        public int MovieId { get; set; }
 
         [ForeignKey("CategoryId")]
         public int? CategoryId { get; set; }
@@ -17,7 +17,7 @@ namespace Mission06_Gordon.Models
         public string Title { get; set; }
         [Required(ErrorMessage = "Year is required.")]
         [Range(1888, int.MaxValue)]
-        public string Year { get; set; }
+        public int Year { get; set; }
         public string ? Director { get; set; }
         public string ? Rating { get; set; }
         [Required(ErrorMessage = "Edited is required.")]
