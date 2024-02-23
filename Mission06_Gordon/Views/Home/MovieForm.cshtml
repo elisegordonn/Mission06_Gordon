@@ -24,12 +24,12 @@
     <br />
     <label asp-for="Title">Movie Title:</label>
     <input asp-for="Title" data-val="true" data-val-required="Title is required." />
-    <span asp-validation-for="Title"></span>
+    <span asp-validation-for="Title" class="text-danger"></span>
     <br />
     <br />
     <label asp-for="Year">Year:</label>
-    <input asp-for="Year" required min="1888" data-val="true" data-val-required="Year is required." data-val-range="Year must be 1888 or later." />
-    <span asp-validation-for="Year"></span>
+    <input asp-for="Year" min="1888" data-val="true" data-val-required="Year is required." data-val-range="Year must be 1888 or later." />
+    <span asp-validation-for="Year" class="text-danger"></span>
     <br />
     <br />
     <label asp-for="Director">Director:</label>
@@ -48,11 +48,11 @@
 
     <!-- not required fields: -->
     <label asp-for="Edited">Edited?</label>
-    <select asp-for="Edited" required data-val="true" data-val-required="Edited is required.">
+    <select asp-for="Edited" data-val="true" data-val-required="Edited is required.">
         <option value="false">No</option>
         <option value="true">Yes</option>
     </select>
-    <span asp-validation-for="Edited"></span>
+    <span asp-validation-for="Edited" class="text-danger"></span>
     <br />
     <br />
     <label asp-for="LentTo">Lent To:</label>
@@ -60,16 +60,16 @@
     <br />
     <br />
     <label asp-for="CopiedToPlex">Copied to Plex?</label>
-    <select asp-for="CopiedToPlex" required data-val="true" data-val-required="Copied to Plex is required.">
+    <select asp-for="CopiedToPlex" data-val="true" data-val-required="Copied to Plex is required.">
         <option value="false">No</option>
         <option value="true">Yes</option>
     </select>
-    <span asp-validation-for="CopiedToPlex"></span>
+    <span asp-validation-for="CopiedToPlex" class="text-danger"></span>
     <br />
     <br />
     <label asp-for="Notes">Notes:</label>
     <input asp-for="Notes" maxlength="25" data-val="true" data-val-length="Notes must be at most 25 characters long." />
-    <span asp-validation-for="Notes"></span>
+    <span asp-validation-for="Notes" class="text-danger"></span>
     <br />
     <br />
     <button type="submit" class="sub-movie">Submit Movie</button>
