@@ -22,17 +22,21 @@ body {
 }
 
 .sub-movie {
-    background-color: #007bff; /* Blue background color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor style */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline */
+    background-color: #007bff;
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    text-align: center; 
+    text-decoration: none; 
     display: inline-block;
 }
 
 .sub-movie:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
+}
+
+thead {
+    color: deeppink;
 }
